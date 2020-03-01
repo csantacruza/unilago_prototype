@@ -25,7 +25,7 @@ class Recomendation extends StatelessWidget {
               icon: Icon(Icons.compare,color: Theme.of(context).accentColor,),
               label: Text('Ver en casa',style: TextStyle(color: Theme.of(context).primaryColor),),
               onPressed: () {
-                Navigator.of(context).pushNamed("/ar");
+                Navigator.of(context).pushNamed("/ar",arguments: "equipo completo");
               },
             )
           ],

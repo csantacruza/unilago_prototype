@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AR extends StatelessWidget {
-  const AR({Key key}) : super(key: key);
+
+  final String data;
+
+  const AR({Key key, this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class AR extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Text("Usa la camara para ver tu producto"),
+            Text("Usa la camara para ver tu $data"),
             Image(
                 image:
                     NetworkImage('https://i.blogs.es/925614/image/1366_2000.jpeg')),

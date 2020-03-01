@@ -1,10 +1,7 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:unilago_prototype/models/item.dart';
 import 'package:unilago_prototype/pages/micro.dart';
 import 'package:unilago_prototype/pages/recomendation.dart';
-import 'package:unilago_prototype/shared/loading.dart';
 
 import 'pages/ar.dart';
 import 'pages/detail_recomendation.dart';
@@ -20,7 +17,6 @@ class Routes {
         if (args is Widget) {
           return MaterialPageRoute(
             builder: (_) => Recomendation(),
-            //builder: (_) => SecondPage(data: args),
           );
         }
         return MaterialPageRoute(builder: (_) => Recomendation());
@@ -32,8 +28,10 @@ class Routes {
       return _errorRoute();
 
       case '/ar':
-        return MaterialPageRoute(builder: (_) => AR());
-
+      if (args is String){
+        return MaterialPageRoute(builder: (_) => AR(data: args));
+      }
+       return _errorRoute();
 
       default:
         return _errorRoute();
