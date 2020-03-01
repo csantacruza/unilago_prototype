@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unilago_prototype/models/item.dart';
 import 'package:unilago_prototype/pages/micro.dart';
 import 'package:unilago_prototype/pages/recomendation.dart';
 
@@ -18,7 +19,7 @@ class Routes {
         return MaterialPageRoute(builder: (_) => Recomendation());
       case '/detail':
       if (args is Item){
-        return MaterialPageRoute(builder: (_) => Detail());
+        return MaterialPageRoute(builder: (_) => RecomendationDetailed(data: args));
       }
       return _errorRoute();
       default:
