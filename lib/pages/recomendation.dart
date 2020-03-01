@@ -16,7 +16,7 @@ class Recomendation extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Ovo',
                   fontSize: 18.0,
-                  color: Colors.black
+                  color: Theme.of(context).primaryColor
                 ),
               ),
           backgroundColor: Colors.white,
@@ -43,7 +43,7 @@ class Recomendation extends StatelessWidget {
 
                       return Column(
                         children: <Widget>[
-                          SizedBox(height: 10.0,),
+                          SizedBox(height: 8.0,),
                           Container(
                             decoration: BoxDecoration(
                               borderRadius:
@@ -51,7 +51,7 @@ class Recomendation extends StatelessWidget {
                               color: Colors.white,
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.black,
+                                  color: Colors.black54,
                                   blurRadius:
                                       6.2, // has the effect of softening the shadow
                                   spreadRadius:
@@ -65,6 +65,7 @@ class Recomendation extends StatelessWidget {
                             ),
                             padding: EdgeInsets.symmetric(horizontal: 30.0),
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
                                 Image(
                                     height: 220,
@@ -72,11 +73,12 @@ class Recomendation extends StatelessWidget {
                                     fit: BoxFit.contain,
                                     image: NetworkImage(article.imageUrl)),
                                 Text(article.name),
+                                SizedBox(height: 8.0,)
                               ],
                             ),
                           ),
                           SizedBox(
-                            height: 10.0,
+                            height: 8.0,
                           )
                         ],
                       );
