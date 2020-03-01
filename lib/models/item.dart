@@ -26,7 +26,7 @@ final Seller mercadoLibre = Seller("Mercado Libre", "MercadoLibre.com", 420);
 final List<Seller> sellers = [turet,amazon,wish,mercadoLibre];
 
 //Items
-final Item graphicTarjet = Item(0, "Nvidia 1080 TI", "https://img2.freepng.es/20180616/hz/kisspng-graphics-cards-video-adapters-nvidia-geforce-gtx-5b253264124df7.953422691529164388075.jpg", "The GeForce® GTX 1080 Ti graphics card is our flagship GPU for 10-series video games. The card offers unmatched power, next-generation GDDR5X 11 Gbps memory and an incredible 11 GB frame buffer", sellers);
+final Item graphicTarjet = Item(0, "Nvidia 1080 TI", "https://http2.mlstatic.com/msi-gtx-1080-ti-founders-edition-tarjetas-graficas-gtx-1080-D_NQ_NP_832252-MCO31459469834_072019-F.jpg", "The GeForce® GTX 1080 Ti graphics card is our flagship GPU for 10-series video games. The card offers unmatched power, next-generation GDDR5X 11 Gbps memory and an incredible 11 GB frame buffer", sellers);
 
 final Item processor = Item(1, "Processor Intel Core i9 9900k", "https://thotcomputacion.com.uy/wp-content/uploads/2019/01/1905517s-l300_f78ef5f3a8544dadaf11e6099f64f97e.png", "The new 9th generation Intel® Core ™ computer processors, the first general purpose computer processor unlocked. Together with Intel® Optane ™ memory, it speeds up the loading and execution of games. With up to 5 GHz and multitasking in 16 ways, take your creativity to the next level with the power you need to create, edit and share content.", sellers);
 

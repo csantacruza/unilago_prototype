@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         buttonColor: Color(0xff7ACEEF),
         cardColor: Color(0xffFFE5E5),
         iconTheme: IconThemeData(
-          color: Colors.white,
+          color: Color(0xff852EAD),
         ),
         appBarTheme: AppBarTheme(
           elevation: 5.0,
