@@ -20,12 +20,21 @@ class Recomendation extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text("Esta es nuestra recomendación",
+          actions: <Widget>[
+            FlatButton.icon(
+              icon: Icon(Icons.compare,color: Theme.of(context).accentColor,),
+              label: Text('Ver en casa',style: TextStyle(color: Theme.of(context).primaryColor),),
+              onPressed: () {
+                Navigator.of(context).pushNamed("/ar");
+              },
+            )
+          ],
+          title: Text("Recomendación",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Ovo',
                   fontSize: 18.0,
-                  color: Colors.black)),
+                  color: Theme.of(context).primaryColor)),
           backgroundColor: Colors.white,
           elevation: 0.0,
           leading: GestureDetector(

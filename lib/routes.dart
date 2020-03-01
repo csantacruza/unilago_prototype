@@ -1,7 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:unilago_prototype/models/item.dart';
 import 'package:unilago_prototype/pages/micro.dart';
 import 'package:unilago_prototype/pages/recomendation.dart';
+import 'package:unilago_prototype/shared/loading.dart';
+
+import 'pages/ar.dart';
+import 'pages/detail_recomendation.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -9,6 +15,7 @@ class Routes {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => Microphone());
+      
       case '/recomendation':
         if (args is Widget) {
           return MaterialPageRoute(
@@ -17,11 +24,17 @@ class Routes {
           );
         }
         return MaterialPageRoute(builder: (_) => Recomendation());
+      
       case '/detail':
       if (args is Item){
         return MaterialPageRoute(builder: (_) => RecomendationDetailed(data: args));
       }
       return _errorRoute();
+
+      case '/ar':
+        return MaterialPageRoute(builder: (_) => AR());
+
+
       default:
         return _errorRoute();
     }
