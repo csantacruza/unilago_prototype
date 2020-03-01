@@ -16,6 +16,7 @@ class Recomendation extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Ovo',
                   fontSize: 18.0,
+                  color: Colors.black
                 ),
               ),
           backgroundColor: Colors.white,
