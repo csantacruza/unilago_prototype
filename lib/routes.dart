@@ -16,7 +16,11 @@ class Routes {
           );
         }
         return MaterialPageRoute(builder: (_) => Recomendation());
-
+      case '/detail':
+      if (args is Item){
+        return MaterialPageRoute(builder: (_) => Detail());
+      }
+      return _errorRoute();
       default:
         return _errorRoute();
     }
